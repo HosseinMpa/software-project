@@ -1,0 +1,39 @@
+@startuml
+actor User
+
+participant "System" as SYS
+participant Show
+participant Seat
+participant Reservation
+participant Payment
+participant "Notification System" as NS
+
+== Book Ticket ==
+
+User -> SYS: Select Movie & Show
+SYS -> Show: getShowInfo()
+Show --> SYS: Show Details
+
+User -> SYS: Select Seat(seatId)
+SYS -> Seat: checkAvailability()
+Seat --> SYS: available
+
+User -> SYS: Book Ticket
+SYS -> Reservation: create(userId, showId, seatId)
+Reservation --> SYS: reservationId
+
+User -> SYS: Make Payment
+SYS -> Payment: process(reservationId)
+Payment --> SYS: success
+
+alt Payment Success
+    SYS -> Reservation: updateStatus("Confirmed")
+    SYS -> NS: sendETicket(user)
+    NS --> SYS: delivered
+    SYS --> User: Ticket Confirmed
+else Payment Failed
+    SYS -> Reservation: updateStatus("Cancelled")
+    SYS --> User: Payment Failed
+end
+
+@enduml
