@@ -1,0 +1,9 @@
+@startuml
+[*] --> Pending
+Pending --> Confirmed : Payment Success
+Pending --> Cancelled : Payment Failed / User Cancel
+Confirmed --> Completed : Showtime Passed
+Confirmed --> Cancelled : User Cancel Before Showtime
+Cancelled --> [*]
+Completed --> [*]
+@enduml

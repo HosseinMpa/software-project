@@ -1,0 +1,83 @@
+@startuml
+
+class User {
+    - userId: int
+    - name: String
+    - email: String
+    - password: String
+    - phoneNumber: String
+    + register()
+    + login()
+    + cancelReservation()
+}
+
+class Admin {
+    - adminId: int
+    - name: String
+    - email: String
+    + addMovie()
+    + removeMovie()
+    + manageSchedules()
+    + viewReports()
+    + manageUsers()
+}
+
+class Movie {
+    - movieId: int
+    - title: String
+    - genre: String
+    - duration: int
+    - director: String
+    - summary: String
+    - rating: float
+    + updateInfo()
+}
+
+class Show {
+    - showId: int
+    - date: Date
+    - time: Time
+    - hall: Hall
+    + checkAvailability()
+}
+
+class Hall {
+    - hallId: int
+    - name: String
+    - capacity: int
+    - seats: List<Seat>
+}
+
+class Seat {
+    - seatId: int
+    - number: String
+    - isAvailable: boolean
+}
+
+class Reservation {
+    - reservationId: int
+    - status: String
+    + cancel()
+    + generateTicket()
+}
+
+class Payment {
+    - paymentId: int
+    - amount: float
+    - status: String
+    + processPayment()
+}
+
+
+User "1" --> "*" Reservation
+Reservation "*" --> "1" Show
+Reservation "*" --> "*" Seat
+Reservation "1" --> "1" Payment
+Show "*" --> "1" Movie
+Show "*" --> "1" Hall
+Hall "1" --> "*" Seat
+Admin "1" --> "*" Movie : manage
+Admin "1" --> "*" Show : manage
+Admin "1" --> "*" User : manage
+
+@enduml
