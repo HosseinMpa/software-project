@@ -1,0 +1,59 @@
+/* حالت دارک برای کل صفحه */
+body.dark {
+    background-color: #121212 !important;
+    color: #f1f1f1 !important;
+}
+
+/* سایدبار */
+body.dark .sidebar {
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+}
+
+body.dark .sidebar ul li a {
+    color: #ddd !important;
+}
+
+body.dark .sidebar ul li.active,
+body.dark .sidebar ul li:hover {
+    background: #333 !important;
+}
+
+/* محتوای اصلی */
+body.dark .main-content {
+    background: #181818 !important;
+    color: #eee !important;
+}
+
+/* کارت‌ها */
+body.dark .card,
+body.dark .settings-card,
+body.dark .stat-box,
+body.dark table {
+    background: #1f1f1f !important;
+    border-color: #333 !important;
+    color: #eaeaea !important;
+}
+
+/* جدول */
+body.dark table th,
+body.dark table td {
+    background: #1e1e1e !important;
+    border-color: #333 !important;
+}
+
+/* دکمه‌ها */
+body.dark .btn-primary {
+    background: #333 !important;
+    color: #fff !important;
+}
+
+body.dark .btn-primary:hover {
+    background: #444 !important;
+}
+
+/* هدر */
+body.dark .dashboard-header h1,
+body.dark .dashboard-header p {
+    color: #ffffff !important;
+}

@@ -1,0 +1,135 @@
+/* =============================
+   MOVIES PAGE
+   ============================= */
+
+body {
+    background: #f4f4f4;
+    margin: 0;
+    font-family: "IRANSans", sans-serif;
+}
+
+/* عنوان بخش */
+.movies-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.movies-section h2 {
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 25px;
+}
+
+/* =============================
+   GRID
+   ============================= */
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 25px;
+    padding: 0 40px 40px;
+}
+
+/* =============================
+   MOVIE CARD
+   ============================= */
+
+.movie-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+/* عنوان فیلم */
+.movie-card h3 {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #222;
+}
+
+/* توضیحات کوچک */
+.movie-card p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+/* =============================
+   BUTTON
+   ============================= */
+
+.movie-btn {
+    display: block;
+    width: 85%;
+    margin: 15px auto 20px;
+    background: #ff3b3b;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.movie-btn:hover {
+    background: #e02e2e;
+}
+
+/* =============================
+   DARK MODE
+   ============================= */
+
+body.dark {
+    background: #1c1c1c;
+}
+
+body.dark .movie-card {
+    background: #2b2b2b;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+body.dark .movie-card h3 {
+    color: #fff;
+}
+
+body.dark .movie-card p {
+    color: #ccc;
+}
+
+body.dark .movie-btn {
+    background: #ff5252;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+
+@media (max-width: 768px) {
+    .movies-section h2 {
+        font-size: 24px;
+    }
+    .movies-grid {
+        padding: 0 20px 40px;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+    .movie-card img {
+        height: 260px;
+    }
+}

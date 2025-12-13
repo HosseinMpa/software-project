@@ -1,0 +1,72 @@
+/* profile.css */
+
+.profile-section {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.profile-card {
+    background: #fff;
+    width: 280px;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #ddd;
+}
+
+.profile-card h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.profile-form {
+    flex: 1;
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.profile-form h3 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.profile-form label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-primary:hover {
+    background: #0066d3;
+}
