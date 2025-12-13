@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>داشبورد مدیریتی سینما</title>
+
+    <!-- CSS FIXED PATHS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/dashboard.css" />
+
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Dashboard JS -->
+    <script src="./js/dashboard.js" defer></script>
+    
+    <script src="./js/auth.js"></script>
+    <script>
+        requireAdmin();
+    </script>
+
+
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">🎬 Cinema Dashboard</div>
+            <ul>
+                <li class="active">داشبورد</li>
+                <li onclick="location.href='profile.html'">پروفایل</li>
+                <li onclick="location.href='settings.html'">تنظیمات</li>
+                <li onclick="logout()">خروج</li>
+            </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Header -->
+        <header class="dashboard-header">
+            <h1>خوش آمدی به پنل مدیریتی</h1>
+            <p>گزارش‌های لحظه‌ای از فروش، کاربران و رزروها</p>
+        </header>
+
+        <!-- Stat Cards -->
+        <section class="cards">
+            <div class="card">
+                <h3>👤 کاربران</h3>
+                <p id="usersCount">120 نفر</p>
+            </div>
+            <div class="card">
+                <h3>🎟️ رزروها</h3>
+                <p id="ordersCount">0 مورد</p>
+            </div>
+            <div class="card">
+                <h3>💰 درآمد امروز</h3>
+                <p id="incomeToday">0 تومان</p>
+            </div>
+            <div class="card">
+                <h3>⭐ میانگین فروش</h3>
+                <p id="avgSale">0 تومان</p>
+            </div>
+        </section>
+
+        <!-- Orders & Income Numbers -->
+        <section class="stats-section">
+            <div class="stat-box">
+                <h3>تعداد سفارشات</h3>
+                <p><span id="totalOrders">0</span> سفارش</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>درآمد کل</h3>
+                <p><span id="totalIncome">0</span> تومان</p>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <div class="chart-container">
+                <h3>نمودار تعداد سفارش‌ها</h3>
+                <canvas id="salesChart"></canvas>
+            </div>
+
+            <div class="chart-container">
+                <h3>نمودار درآمد</h3>
+                <canvas id="incomeChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Latest Reservations Table -->
+        <div class="dashboard-reservations">
+            <h2>📋 آخرین رزروها</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>فیلم</th>
+                        <th>سانس</th>
+                        <th>صندلی‌ها</th>
+                        <th>مبلغ</th>
+                        <th>تاریخ</th>
+                    </tr>
+                </thead>
+                <tbody id="reservationsTable">
+                    <!-- با dashboard.js پر می‌شود -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- User Activity -->
+        <section class="table-section">
+            <h2>👥 آخرین فعالیت‌ها</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>کاربر</th>
+                        <th>فعالیت</th>
+                        <th>تاریخ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>علی</td>
+                        <td>ورود به سیستم</td>
+                        <td>1403/09/21</td>
+                    </tr>
+                    <tr>
+                        <td>سارا</td>
+                        <td>ویرایش پروفایل</td>
+                        <td>1403/09/21</td>
+                    </tr>
+                    <tr>
+                        <td>مینا</td>
+                        <td>ثبت رزرو جدید</td>
+                        <td>1403/09/20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+</body>
+</html>

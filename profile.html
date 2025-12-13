@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پروفایل کاربر</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/profile.css">
+
+
+    <!-- JS -->
+    <script src="./js/global.js"></script>
+    <script src="./js/profile.js" defer></script>
+    <script src="./js/auth.js"></script>
+        <script>
+            requireAuth();
+        </script>
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="logo">🎬 Cinema Dashboard</div>
+        <ul>
+            <li><a href="dashboard.html">داشبورد</a></li>
+            <li class="active"><a href="profile.html">پروفایل</a></li>
+            <li><a href="settings.html">تنظیمات</a></li>
+            <li><a href="logout.html">خروج</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+
+        <header class="dashboard-header">
+            <h1>پروفایل کاربری</h1>
+            <p>مشخصات حساب کاربری شما</p>
+        </header>
+
+        <section class="profile-section">
+
+            <div class="profile-card">
+                <img src="./images/profile/Hosien.jpg" alt="User Avatar" class="profile-avatar">
+
+                <h2 id="profileFullName">مدیر سیستم</h2>
+                <p id="profileUsername">نام کاربری: admin</p>
+            </div>
+
+            <div class="profile-form">
+                <h3>ویرایش اطلاعات</h3>
+
+                <label>نام کامل</label>
+                <input type="text" id="fullNameInput">
+
+                <label>ایمیل</label>
+                <input type="email" id="emailInput">
+
+                <label>رمز عبور جدید</label>
+                <input type="password" id="passwordInput" placeholder="خالی بگذارید اگر نمی‌خواهید تغییر دهید">
+
+                <button id="saveProfile" class="btn-primary">ذخیره تغییرات</button>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+</html>

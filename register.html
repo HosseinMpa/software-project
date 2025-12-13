@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت‌نام | Cinema</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/auth.css" />
+    <link rel="stylesheet" href="./css/register.css">
+
+
+</head>
+<body class="auth-page">
+
+    <div class="auth-container">
+
+        <h2>🎟️ ثبت‌نام در سینما</h2>
+        <p class="auth-subtitle">ساخت حساب کاربری جدید</p>
+
+        <form id="registerForm" class="auth-form">
+
+            <label>نام کامل</label>
+            <input type="text" id="fullname" placeholder="نام و نام خانوادگی" required />
+
+            <label>نام کاربری</label>
+            <input type="text" id="username" placeholder="username" required />
+
+            <label>رمز عبور</label>
+            <input type="password" id="password" placeholder="********" required />
+
+            <label>تکرار رمز عبور</label>
+            <input type="password" id="confirmPassword" placeholder="********" required />
+
+            <button type="submit" class="btn-primary">ثبت‌نام</button>
+        </form>
+
+        <p class="auth-footer">
+            قبلاً ثبت‌نام کرده‌اید؟
+            <a href="login.html">ورود</a>
+        </p>
+
+    </div>
+
+    <!-- JS -->
+    <script src="./js/register.js"></script>
+
+</body>
+</html>
