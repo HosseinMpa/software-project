@@ -7,6 +7,7 @@
 }
 
 /* ================== BODY ================== */
+<<<<<<< HEAD
 body {
     min-height: 100vh;
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -25,6 +26,44 @@ body {
     border-radius: 18px;
     padding: 40px 35px;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+=======
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    color: #fff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/backgrounds/cinema-background.jpg") center / cover no-repeat;
+    filter: brightness(0.4) blur(4px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+
+/* ================== LOGIN CARD ================== */
+.login-container {
+    width: 100%;
+    max-width: 560px;
+    max-height: 450px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px);
+    border-radius: 20px;
+    padding: 42px 36px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6);
+>>>>>>> 451451a (uploading css changes)
     animation: fadeIn 0.8s ease;
 }
 
@@ -32,8 +71,15 @@ body {
 .login-container h2 {
     text-align: center;
     margin-bottom: 30px;
+<<<<<<< HEAD
     font-size: 1.6rem;
     color: #f1f1f1;
+=======
+    font-size: 1.7rem;
+    color: #ffd6d6;
+    font-weight: bold;
+    letter-spacing: 1px;
+>>>>>>> 451451a (uploading css changes)
 }
 
 /* ================== FORM ================== */
@@ -46,8 +92,13 @@ body {
 /* ================== INPUTS ================== */
 .login-container input {
     width: 100%;
+<<<<<<< HEAD
     padding: 12px 14px;
     border-radius: 10px;
+=======
+    padding: 13px 15px;
+    border-radius: 12px;
+>>>>>>> 451451a (uploading css changes)
     border: none;
     outline: none;
     font-size: 0.95rem;
@@ -56,15 +107,24 @@ body {
 }
 
 .login-container input::placeholder {
+<<<<<<< HEAD
     color: #ddd;
+=======
+    color: #f1caca;
+>>>>>>> 451451a (uploading css changes)
 }
 
 .login-container input:focus {
     background: rgba(255, 255, 255, 0.25);
+<<<<<<< HEAD
+=======
+    box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.35);
+>>>>>>> 451451a (uploading css changes)
 }
 
 /* ================== BUTTON ================== */
 .login-container button {
+<<<<<<< HEAD
     margin-top: 10px;
     padding: 12px;
     border-radius: 12px;
@@ -74,11 +134,24 @@ body {
     font-weight: bold;
     color: #0f2027;
     background: linear-gradient(135deg, #f9d423, #ff4e50);
+=======
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    letter-spacing: 1px;
+>>>>>>> 451451a (uploading css changes)
     transition: all 0.3s ease;
 }
 
 .login-container button:hover {
     transform: translateY(-2px);
+<<<<<<< HEAD
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -99,6 +172,47 @@ body {
     text-decoration: underline;
 }
 
+=======
+    box-shadow: 0 10px 25px rgba(255, 61, 74, 0.45);
+}
+.login-footer .register {
+    color: #f9d423;        /* طلایی */
+    font-weight: bold;     /* بولد */
+    font-size: 0.95rem;
+    margin-right: 6px;
+    transition: all 0.3s ease;
+
+}
+
+.login-footer .register:hover {
+    color: #ffe680;
+    text-shadow: 0 0 8px rgba(249, 212, 35, 0.6);
+    font-size: 1rem;
+}
+/* ================== FOOTER ================== */
+.login-footer {
+    margin-top: 22px;
+    text-align: center;
+    font-size: 1rem;
+    color: #f1caca;
+}
+
+.login-footer a {
+    color: #ffd500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 1.2rem;   /* بزرگ‌تر */
+}
+
+.login-footer a:hover {
+    color: #ffd500;
+    text-decoration: underline;
+    font-size: 1.25rem;
+}
+
+
+>>>>>>> 451451a (uploading css changes)
 /* ================== ANIMATION ================== */
 @keyframes fadeIn {
     from {

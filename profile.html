@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>پروفایل کاربر</title>
 
     <!-- CSS -->
@@ -19,19 +20,42 @@
             requireAuth();
         </script>
 
+=======
+    <title>پروفایل کاربر | پنل مدیریت</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/profile.css">
+
+    <!-- JS -->
+    <script src="./js/global.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/profile.js" defer></script>
+
+    <script>
+        requireAuth();
+    </script>
+>>>>>>> 451451a (uploading css changes)
 </head>
 
 <body>
 
+<<<<<<< HEAD
     <!-- Sidebar -->
     <div class="sidebar">
         <div class="logo">🎬 Cinema Dashboard</div>
         <ul>
+=======
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="logo">🎬 Cinema Panel</div>
+        <ul class="menu">
+>>>>>>> 451451a (uploading css changes)
             <li><a href="dashboard.html">داشبورد</a></li>
             <li class="active"><a href="profile.html">پروفایل</a></li>
             <li><a href="settings.html">تنظیمات</a></li>
             <li><a href="logout.html">خروج</a></li>
         </ul>
+<<<<<<< HEAD
     </div>
 
     <div class="main-content">
@@ -39,10 +63,21 @@
         <header class="dashboard-header">
             <h1>پروفایل کاربری</h1>
             <p>مشخصات حساب کاربری شما</p>
+=======
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <header class="dashboard-header">
+            <h1>پروفایل کاربری</h1>
+            <p>مدیریت اطلاعات حساب</p>
+>>>>>>> 451451a (uploading css changes)
         </header>
 
         <section class="profile-section">
 
+<<<<<<< HEAD
             <div class="profile-card">
                 <img src="./images/profile/Hosien.jpg" alt="User Avatar" class="profile-avatar">
 
@@ -50,24 +85,50 @@
                 <p id="profileUsername">نام کاربری: admin</p>
             </div>
 
+=======
+            <!-- PROFILE CARD -->
+            <div class="profile-card">
+                <img src="./images/profile/Hosien.jpg" alt="User Avatar">
+                <h2 id="profileFullName">مدیر سیستم</h2>
+                <span id="profileUsername">@admin</span>
+            </div>
+
+            <!-- PROFILE FORM -->
+>>>>>>> 451451a (uploading css changes)
             <div class="profile-form">
                 <h3>ویرایش اطلاعات</h3>
 
                 <label>نام کامل</label>
                 <input type="text" id="fullNameInput">
 
+<<<<<<< HEAD
+=======
+                <label>نام کاربری</label>
+                <input type="text" id="usernameInput" disabled>
+
+>>>>>>> 451451a (uploading css changes)
                 <label>ایمیل</label>
                 <input type="email" id="emailInput">
 
                 <label>رمز عبور جدید</label>
+<<<<<<< HEAD
                 <input type="password" id="passwordInput" placeholder="خالی بگذارید اگر نمی‌خواهید تغییر دهید">
 
                 <button id="saveProfile" class="btn-primary">ذخیره تغییرات</button>
+=======
+                <input type="password" id="passwordInput" placeholder="در صورت عدم تغییر خالی بگذارید">
+
+                <button id="saveProfile">ذخیره تغییرات</button>
+>>>>>>> 451451a (uploading css changes)
             </div>
 
         </section>
 
+<<<<<<< HEAD
     </div>
+=======
+    </main>
+>>>>>>> 451451a (uploading css changes)
 
 </body>
 </html>
