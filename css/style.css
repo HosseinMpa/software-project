@@ -1,23 +1,10 @@
 body {
     margin: 0;
-<<<<<<< HEAD
     font-family: tahoma, sans-serif;
     background: #f4f4f4;
 }
 
 /* Header */
-=======
-    font-family: "IRANSans", sans-serif;
-    background: linear-gradient(135deg, #1e3c72, #2a5298); /* آبی گرادیانت */
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
-
-
->>>>>>> 451451a (uploading css changes)
 .main-header {
     background: #222;
     color: white;
@@ -38,10 +25,7 @@ body {
     color: #ffcc00;
 }
 
-<<<<<<< HEAD
 /* Hero Section */
-=======
->>>>>>> 451451a (uploading css changes)
 .hero {
     text-align: center;
     padding: 50px 15px;
@@ -126,4 +110,113 @@ body {
 .btn-register:hover {
     background: #e63939;
 }
+
+
+/* ===== Movies Section ===== */
+.now-showing {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+/* ===== Movie Card ===== */
+.movie-card {
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.movie-poster {
+    position: relative;
+}
+
+.movie-poster img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+}
+
+.movie-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff5252;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 20px;
+}
+
+.movie-badge.hot {
+    background: #ff9800;
+}
+
+/* ===== Info ===== */
+.movie-info {
+    padding: 15px;
+}
+
+.movie-info h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.movie-genre {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 12px;
+}
+
+.movie-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.btn-book {
+    background: #ff5252;
+    color: #fff;
+    padding: 7px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-book:hover {
+    background: #e53935;
+}
+
+.view-all {
+    display: inline-block;
+    margin-top: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+}
+
 
