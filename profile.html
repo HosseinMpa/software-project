@@ -3,132 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>پروفایل کاربر</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/dashboard.css">
-    <link rel="stylesheet" href="./css/profile.css">
-
-
-    <!-- JS -->
-    <script src="./js/global.js"></script>
-    <script src="./js/profile.js" defer></script>
-    <script src="./js/auth.js"></script>
-        <script>
-            requireAuth();
-        </script>
-
-=======
     <title>پروفایل کاربر | پنل مدیریت</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="backend/css/style.css">
+    <link rel="stylesheet" href="backend/css/profile.css">
 
-    <!-- JS -->
     <script src="./js/global.js"></script>
     <script src="./js/auth.js"></script>
     <script src="./js/profile.js" defer></script>
 
     <script>
+        // بررسی دسترسی کاربر
         requireAuth();
     </script>
->>>>>>> 451451a (uploading css changes)
 </head>
 
-<body>
+<body class="dashboard-body">
 
-<<<<<<< HEAD
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">🎬 Cinema Dashboard</div>
-        <ul>
-=======
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-        <div class="logo">🎬 Cinema Panel</div>
-        <ul class="menu">
->>>>>>> 451451a (uploading css changes)
-            <li><a href="dashboard.html">داشبورد</a></li>
-            <li class="active"><a href="profile.html">پروفایل</a></li>
-            <li><a href="settings.html">تنظیمات</a></li>
-            <li><a href="logout.html">خروج</a></li>
-        </ul>
-<<<<<<< HEAD
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">🎬 Cinema Panel</a>
+            <nav class="nav">
+                <a href="index.html">خانه</a>
+                <a href="dashboard.html">داشبورد</a>
+                <a href="logout.html">خروج</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-wrapper">
+        <aside class="sidebar">
+            <ul class="menu">
+                <li><a href="dashboard.html">🏠 داشبورد</a></li>
+                <li class="active"><a href="profile.html">👤 پروفایل</a></li>
+                <li><a href="logout.html">🚪 خروج</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <header class="section-header">
+                <h1>پروفایل کاربری</h1>
+                <p>مدیریت اطلاعات حساب کاربری</p>
+            </header>
+
+            <section class="profile-section">
+                <div class="profile-card">
+                    <div class="avatar-container">
+                        <img src="./images/profile/Hosien.jpg" alt="User Avatar" id="userAvatar">
+                    </div>
+                    <h2 id="profileFullName">مدیر سیستم</h2>
+                    <span id="profileUsername">@admin</span>
+                </div>
+
+                <div class="profile-form">
+                    <h3>ویرایش اطلاعات</h3>
+
+                    <div class="form-group">
+                        <label>نام کامل</label>
+                        <input type="text" id="fullNameInput" placeholder="نام خود را وارد کنید">
+                    </div>
+
+                    <div class="form-group">
+                        <label>نام کاربری</label>
+                        <input type="text" id="usernameInput" disabled title="نام کاربری قابل تغییر نیست">
+                    </div>
+
+                    <div class="form-group">
+                        <label>ایمیل</label>
+                        <input type="email" id="emailInput" placeholder="example@mail.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label>رمز عبور جدید</label>
+                        <input type="password" id="passwordInput" placeholder="در صورت عدم تغییر خالی بگذارید">
+                    </div>
+
+                    <button id="saveProfile" class="btn-save">ذخیره تغییرات</button>
+                </div>
+            </section>
+        </main>
     </div>
-
-    <div class="main-content">
-
-        <header class="dashboard-header">
-            <h1>پروفایل کاربری</h1>
-            <p>مشخصات حساب کاربری شما</p>
-=======
-    </aside>
-
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-
-        <header class="dashboard-header">
-            <h1>پروفایل کاربری</h1>
-            <p>مدیریت اطلاعات حساب</p>
->>>>>>> 451451a (uploading css changes)
-        </header>
-
-        <section class="profile-section">
-
-<<<<<<< HEAD
-            <div class="profile-card">
-                <img src="./images/profile/Hosien.jpg" alt="User Avatar" class="profile-avatar">
-
-                <h2 id="profileFullName">مدیر سیستم</h2>
-                <p id="profileUsername">نام کاربری: admin</p>
-            </div>
-
-=======
-            <!-- PROFILE CARD -->
-            <div class="profile-card">
-                <img src="./images/profile/Hosien.jpg" alt="User Avatar">
-                <h2 id="profileFullName">مدیر سیستم</h2>
-                <span id="profileUsername">@admin</span>
-            </div>
-
-            <!-- PROFILE FORM -->
->>>>>>> 451451a (uploading css changes)
-            <div class="profile-form">
-                <h3>ویرایش اطلاعات</h3>
-
-                <label>نام کامل</label>
-                <input type="text" id="fullNameInput">
-
-<<<<<<< HEAD
-=======
-                <label>نام کاربری</label>
-                <input type="text" id="usernameInput" disabled>
-
->>>>>>> 451451a (uploading css changes)
-                <label>ایمیل</label>
-                <input type="email" id="emailInput">
-
-                <label>رمز عبور جدید</label>
-<<<<<<< HEAD
-                <input type="password" id="passwordInput" placeholder="خالی بگذارید اگر نمی‌خواهید تغییر دهید">
-
-                <button id="saveProfile" class="btn-primary">ذخیره تغییرات</button>
-=======
-                <input type="password" id="passwordInput" placeholder="در صورت عدم تغییر خالی بگذارید">
-
-                <button id="saveProfile">ذخیره تغییرات</button>
->>>>>>> 451451a (uploading css changes)
-            </div>
-
-        </section>
-
-<<<<<<< HEAD
-    </div>
-=======
-    </main>
->>>>>>> 451451a (uploading css changes)
 
 </body>
 </html>

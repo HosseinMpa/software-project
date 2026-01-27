@@ -1,0 +1,246 @@
+/* =============================
+   RESET & FONTS
+   ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "A Ordibehesht shablon", "Vazirmatn", sans-serif;
+}
+
+/* =============================
+   BODY & BACKGROUND
+   ============================= */
+body {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/backgrounds/Booking-background.jpg") center / cover no-repeat;
+    filter: brightness(0.3) blur(5px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* =============================
+   BOOKING CONTAINER
+   ============================= */
+.booking-container {
+    width: 90%;
+    max-width: 800px;
+    margin: 110px auto 40px; /* فاصله از بالا برای جلوگیری از تداخل با هدر */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #ff3d4a;
+    text-shadow: 0 2px 10px rgba(255, 61, 74, 0.3);
+}
+
+/* =============================
+   MOVIE SELECT
+   ============================ */
+.movie-select {
+    margin-bottom: 25px;
+}
+
+.movie-select label {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #ffd6d6;
+}
+
+.movie-select select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 18px;
+    outline: none;
+}
+
+.movie-select select option {
+    background: #222;
+    color: #fff;
+}
+
+/* =============================
+   TIMES SELECTION
+   ============================= */
+.times h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 22px;
+    color: #ffd6d6;
+}
+
+.time-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.time-btn {
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.time-btn:hover {
+    background: rgba(255, 61, 74, 0.3);
+}
+
+.time-btn.active {
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(255, 61, 74, 0.5);
+}
+.screen-container {
+    width: 100%;
+    margin: 50px 0 30px 0;
+    text-align: center; /* تراز کردن متن و پرده در وسط */
+}
+
+/* استایل متن بالای پرده */
+.screen-text {
+    display: block;
+    color: rgba(255, 255, 255, 0.6); /* رنگ سفید نیمه‌شفاف */
+    font-size: 14px;
+    margin-bottom: 10px; /* فاصله متن تا خودِ پرده */
+    letter-spacing: 3px;
+}
+
+/* خودِ پرده سینما (فقط به صورت یک خط درخشان) */
+.screen {
+    width: 90%;
+    height: 6px;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+.seats-container {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.seat {
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px 6px 2px 2px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 4px solid rgba(0,0,0,0.3);
+}
+
+.seat:not(.reserved):hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.seat.selected {
+    background: #1abc9c;
+    box-shadow: 0 0 10px rgba(26, 188, 156, 0.8);
+}
+
+.seat.reserved {
+    background: #444;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+/* =============================
+   SUMMARY & BUTTON
+   ============================= */
+.summary {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.summary p {
+    margin: 8px 0;
+    font-size: 18px;
+    color: #f1caca;
+}
+
+.summary span {
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn-reserve {
+    width: 100%;
+    margin-top: 25px;
+    padding: 15px;
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reserve:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 61, 74, 0.5);
+}
+/* مخفی کردن دکمه اضافی در دسکتاپ */
+.menu-btn {
+    display: none !important;
+}
+
+/* اگر در موبایل خواستی نمایش داده شود، این بخش را اضافه کن */
+@media (max-width: 768px) {
+    .nav {
+        display: none; /* منوی اصلی در موبایل مخفی شود */
+    }
+    .menu-btn {
+        display: block !important; /* دکمه همبرگری فقط در موبایل ظاهر شود */
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

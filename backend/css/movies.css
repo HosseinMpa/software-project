@@ -1,25 +1,4 @@
 /* =============================
-<<<<<<< HEAD
-   MOVIES PAGE
-   ============================= */
-
-body {
-    background: #f4f4f4;
-    margin: 0;
-    font-family: "IRANSans", sans-serif;
-}
-
-/* عنوان بخش */
-.movies-section {
-    text-align: center;
-    padding: 40px 20px;
-}
-
-.movies-section h2 {
-    font-size: 28px;
-    color: #222;
-    margin-bottom: 25px;
-=======
    BODY & PAGE BACKGROUND
    ============================= */
 body {
@@ -33,7 +12,7 @@ body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: url("../images/backgrounds/Booking-background.jpg") center / cover no-repeat;
+    background: url("../../images/backgrounds/Booking-background.jpg") center / cover no-repeat;
     filter: brightness(0.4) blur(4px);
     z-index: -2;
 }
@@ -101,41 +80,21 @@ body::after {
     color: #ffd6d6;
     margin-bottom: 30px;
     letter-spacing: 1px;
->>>>>>> 451451a (uploading css changes)
 }
 
 /* =============================
    GRID
    ============================= */
-<<<<<<< HEAD
-
-.movies-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 25px;
-    padding: 0 40px 40px;
-=======
 .movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 28px;
     padding: 0 50px 50px;
->>>>>>> 451451a (uploading css changes)
 }
 
 /* =============================
    MOVIE CARD
    ============================= */
-<<<<<<< HEAD
-
-.movie-card {
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
-    text-align: center;
-=======
 .movie-card {
     position: relative;
     border-radius: 18px;
@@ -145,82 +104,10 @@ body::after {
     height: 380px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.35);
     transition: all 0.35s ease;
->>>>>>> 451451a (uploading css changes)
 }
 
 .movie-card:hover {
     transform: translateY(-6px);
-<<<<<<< HEAD
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.movie-card img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-}
-
-/* عنوان فیلم */
-.movie-card h3 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: #222;
-}
-
-/* توضیحات کوچک */
-.movie-card p {
-    margin: 4px 0;
-    color: #666;
-    font-size: 14px;
-    padding: 0 10px;
-}
-
-/* =============================
-   BUTTON
-   ============================= */
-
-.movie-btn {
-    display: block;
-    width: 85%;
-    margin: 15px auto 20px;
-    background: #ff3b3b;
-    color: white;
-    padding: 10px 0;
-    text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: 0.3s;
-}
-
-.movie-btn:hover {
-    background: #e02e2e;
-}
-
-/* =============================
-   DARK MODE
-   ============================= */
-
-body.dark {
-    background: #1c1c1c;
-}
-
-body.dark .movie-card {
-    background: #2b2b2b;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(255,255,255,0.05);
-}
-
-body.dark .movie-card h3 {
-    color: #fff;
-}
-
-body.dark .movie-card p {
-    color: #ccc;
-}
-
-body.dark .movie-btn {
-    background: #ff5252;
-=======
     box-shadow: 0 20px 45px rgba(0,0,0,0.45);
 }
 
@@ -263,7 +150,21 @@ body.dark .movie-btn {
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(255,61,74,0.45);
 }
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* هدر را در وسط نگه می‌دارد */
+    padding: 15px 0;
+}
 
+.header-content {
+    width: 96%; /* یا 100% اگر می‌خواهید کاملاً به لبه بچسبد */
+    max-width: 1800px; /* برای مانیتورهای خیلی بزرگ */
+    display: flex;
+    justify-content: space-between; /* لوگو راست، منو چپ */
+    align-items: center;
+    margin: 0 auto;
+}
 
 /* =============================
    FOOTER
@@ -273,28 +174,15 @@ body.dark .movie-btn {
     padding: 20px;
     color: #f1caca;
     font-size: 14px;
->>>>>>> 451451a (uploading css changes)
 }
 
 /* =============================
    RESPONSIVE
    ============================= */
-<<<<<<< HEAD
-
-=======
->>>>>>> 451451a (uploading css changes)
 @media (max-width: 768px) {
     .movies-section h2 {
         font-size: 24px;
     }
-<<<<<<< HEAD
-    .movies-grid {
-        padding: 0 20px 40px;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    }
-    .movie-card img {
-        height: 260px;
-=======
 
     .movies-grid {
     display: grid;
@@ -306,6 +194,5 @@ body.dark .movie-btn {
 
     .movie-card {
         height: 300px;
->>>>>>> 451451a (uploading css changes)
     }
 }

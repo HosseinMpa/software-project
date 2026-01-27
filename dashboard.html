@@ -1,230 +1,115 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<<<<<<< HEAD
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>داشبورد مدیریتی سینما</title>
+    <title>داشبورد مدیریتی | سینما رزرو</title>
 
-    <!-- CSS FIXED PATHS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/dashboard.css" />
+    <link rel="stylesheet" href="backend/css/style.css" />
+    <link rel="stylesheet" href="backend/css/dashboard.css" />
 
-
-    <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <!-- Dashboard JS -->
-    <script src="./js/dashboard.js" defer></script>
-    
+    <script src="./js/global.js"></script>
     <script src="./js/auth.js"></script>
+    <script src="./js/dashboard.js" defer></script>
+
     <script>
-        requireAdmin();
+        requireAdmin(); // بررسی دسترسی ادمین
     </script>
-
-
 </head>
 
-<body>
-    <!-- Sidebar -->
-    <div class="sidebar">
-        <div class="logo">🎬 Cinema Dashboard</div>
-            <ul>
-                <li class="active">داشبورد</li>
-                <li onclick="location.href='profile.html'">پروفایل</li>
-                <li onclick="location.href='settings.html'">تنظیمات</li>
-                <li onclick="logout()">خروج</li>
-            </ul>
-    </div>
+<body class="dashboard-body">
 
-    <!-- Main Content -->
-    <div class="main-content">
-
-        <!-- Header -->
-        <header class="dashboard-header">
-            <h1>خوش آمدی به پنل مدیریتی</h1>
-            <p>گزارش‌های لحظه‌ای از فروش، کاربران و رزروها</p>
-        </header>
-
-        <!-- Stat Cards -->
-        <section class="cards">
-            <div class="card">
-                <h3>👤 کاربران</h3>
-                <p id="usersCount">120 نفر</p>
-            </div>
-            <div class="card">
-                <h3>🎟️ رزروها</h3>
-                <p id="ordersCount">0 مورد</p>
-            </div>
-            <div class="card">
-                <h3>💰 درآمد امروز</h3>
-                <p id="incomeToday">0 تومان</p>
-            </div>
-            <div class="card">
-                <h3>⭐ میانگین فروش</h3>
-                <p id="avgSale">0 تومان</p>
-            </div>
-        </section>
-
-        <!-- Orders & Income Numbers -->
-        <section class="stats-section">
-            <div class="stat-box">
-                <h3>تعداد سفارشات</h3>
-                <p><span id="totalOrders">0</span> سفارش</p>
-            </div>
-
-            <div class="stat-box">
-                <h3>درآمد کل</h3>
-                <p><span id="totalIncome">0</span> تومان</p>
-            </div>
-        </section>
-
-        <!-- Charts Section -->
-        <section class="charts-section">
-            <div class="chart-container">
-                <h3>نمودار تعداد سفارش‌ها</h3>
-                <canvas id="salesChart"></canvas>
-            </div>
-
-            <div class="chart-container">
-                <h3>نمودار درآمد</h3>
-                <canvas id="incomeChart"></canvas>
-            </div>
-        </section>
-
-        <!-- Latest Reservations Table -->
-        <div class="dashboard-reservations">
-            <h2>📋 آخرین رزروها</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>فیلم</th>
-                        <th>سانس</th>
-                        <th>صندلی‌ها</th>
-                        <th>مبلغ</th>
-                        <th>تاریخ</th>
-                    </tr>
-                </thead>
-                <tbody id="reservationsTable">
-                    <!-- با dashboard.js پر می‌شود -->
-                </tbody>
-            </table>
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">🎬 Cinema Panel</a>
+            <nav class="nav">
+                <a href="index.html">خانه</a>
+                <a href="profile.html">پروفایل</a>
+                <a href="#" onclick="logout()">خروج</a>
+            </nav>
         </div>
-
-        <!-- User Activity -->
-        <section class="table-section">
-            <h2>👥 آخرین فعالیت‌ها</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>کاربر</th>
-                        <th>فعالیت</th>
-                        <th>تاریخ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>علی</td>
-                        <td>ورود به سیستم</td>
-                        <td>1403/09/21</td>
-                    </tr>
-                    <tr>
-                        <td>سارا</td>
-                        <td>ویرایش پروفایل</td>
-                        <td>1403/09/21</td>
-                    </tr>
-                    <tr>
-                        <td>مینا</td>
-                        <td>ثبت رزرو جدید</td>
-                        <td>1403/09/20</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-    </div>
-=======
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>داشبورد مدیریت سینما</title>
-
-<link rel="stylesheet" href="./css/dashboard.css">
-<script src="./js/global.js"></script>
-<script src="./js/dashboard.js" defer></script>
-</head>
-<body>
-
-<div class="sidebar">
-    <div class="logo">🎬 Cinema Dashboard</div>
-    <ul>
-        <li class="active"><a href="dashboard.html">داشبورد</a></li>
-        <li><a href="users.html">کاربران</a></li>
-        <li><a href="movies.html">فیلم‌ها</a></li>
-        <li><a href="reservations.html">رزروها</a></li>
-        <li><a href="reports.html">گزارش‌ها</a></li>
-        <li><a href="settings.html">تنظیمات</a></li>
-        <li><a href="logout.html">خروج</a></li>
-    </ul>
-</div>
-
-<div class="main-content">
-    <header class="dashboard-header">
-        <h1>داشبورد مدیریت</h1>
-        <p> مدیر سیستم 🎬</p>
     </header>
 
-    <section class="stats-section">
-        <div class="stat-card">
-            <h3>کاربران</h3>
-            <p>۲۵۰</p>
-        </div>
-        <div class="stat-card">
-            <h3>رزرو امروز</h3>
-            <p>۴۷</p>
-        </div>
-        <div class="stat-card">
-            <h3>فیلم‌ها</h3>
-            <p>7</p>
-        </div>
-        <div class="stat-card">
-            <h3>درآمد ماهانه</h3>
-            <p>۳,۵۰۰,۰۰۰ تومان</p>
-        </div>
-    </section>
+    <div class="container-wrapper">
+        <aside class="sidebar">
+            <ul class="menu">
+                <li class="active"><a href="dashboard.html">📊 داشبورد</a></li>
+                <li><a href="users.html">👥 کاربران</a></li>
+                <li><a href="movies.html">🎥 فیلم‌ها</a></li>
+                <li><a href="reservations.html">🎟️ رزروها</a></li>
+                <li><a href="settings.html">⚙️ تنظیمات</a></li>
+            </ul>
+        </aside>
 
-    <section class="recent-section">
-        <h2>رزروهای اخیر</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>نام مشتری</th>
-                    <th>فیلم</th>
-                    <th>تاریخ</th>
-                    <th>سانس</th>
-                    <th>صندلی</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>حسین</td>
-                    <td>آواتار ۲</td>
-                    <td>۱۴۰۴/۰۹/۱۵</td>
-                    <td>22:00</td>
-                    <td>44</td>
-                </tr>
-                <tr>
-                    <td>سارا</td>
-                    <td>نگهبانان کهکشان</td>
-                    <td>۱۴۰۴/۰۹/۱۵</td>
-                    <td>18:00</td>
-                    <td>22</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
+        <main class="main-content">
+            <header class="dashboard-title">
+                <h1>خوش آمدید، مدیر سیستم</h1>
+                <p>گزارش لحظه‌ای وضعیت فروش و سینما</p>
+            </header>
 
-</div>
+            <section class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">👤</div>
+                    <div class="stat-info">
+                        <h3>کاربران</h3>
+                        <p id="usersCount">250 نفر</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎟️</div>
+                    <div class="stat-info">
+                        <h3>رزرو امروز</h3>
+                        <p id="ordersCount">47 مورد</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-info">
+                        <h3>درآمد ماهانه</h3>
+                        <p id="totalIncome">3,500,000 تومان</p>
+                    </div>
+                </div>
+            </section>
 
->>>>>>> 451451a (uploading css changes)
+            <section class="charts-section">
+                <div class="chart-box">
+                    <h3>📈 نمودار فروش</h3>
+                    <canvas id="salesChart"></canvas>
+                </div>
+                <div class="chart-box">
+                    <h3>💰 تحلیل درآمد</h3>
+                    <canvas id="incomeChart"></canvas>
+                </div>
+            </section>
+
+            <section class="table-section">
+                <h2>📋 آخرین رزروها</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>مشتری</th>
+                                <th>فیلم</th>
+                                <th>سانس</th>
+                                <th>صندلی</th>
+                                <th>مبلغ</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reservationsTable">
+                            <tr>
+                                <td>حسین</td>
+                                <td>آواتار ۲</td>
+                                <td>22:00</td>
+                                <td>44</td>
+                                <td>150,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
 </body>
 </html>
