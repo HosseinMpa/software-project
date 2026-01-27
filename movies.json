@@ -25,5 +25,61 @@
         "duration": 168,
         "genre": "اکشن",
         "poster": "./images/slider/johnwick4.jpg"
+    },
+
+    {
+    "id": 101,
+    "title": "تمساح خونی",
+    "genre": "اکشن",
+    "duration": 110,
+    "price": 85000,
+    "poster": "images/movies/tamsah.jpg",
+    "status": "trending",
+    "country": "iran"
+    },
+
+    {
+    "id": 102,
+    "title": "بی بدن",
+    "genre": "درام",
+    "duration": 105,
+    "price": 80000,
+    "poster": "images/movies/bibadan.jpg",
+    "status": "trending",
+    "country": "iran"
+    },
+
+    {
+    "id": 103,
+    "title": "فسیل",
+    "genre": "کمدی",
+    "duration": 120,
+    "price": 90000,
+    "poster": "images/movies/fossil.jpg",
+    "status": "trending",
+    "country": "iran"
+    },
+    
+    {
+    "id": 104,
+    "title": "ملاقات خصوصی",
+    "genre": "عاشقانه",
+    "duration": 115,
+    "price": 85000,
+    "poster": "images/movies/molaghat.jpg",
+    "status": "trending",
+    "country": "iran"
+    },
+
+    {
+    "id": 105,
+    "title": "کت چرمی",
+    "genre": "جنایی",
+    "duration": 108,
+    "price": 88000,
+    "poster": "images/movies/katcharmi.jpg",
+    "status": "trending",
+    "country": "iran"
     }
+
 ]
