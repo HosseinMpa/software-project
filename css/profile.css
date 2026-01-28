@@ -1,0 +1,201 @@
+/* ================== RESET & BASE ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vazirmatn", "IRANSans", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1c1c1c, #2b0f12);
+    color: #fff;
+    display: flex;
+    flex-direction: column; /* برای قرارگیری هدر در بالا */
+}
+
+/* ================== LAYOUT WRAPPER ================== */
+.container-wrapper {
+    display: flex;
+    flex: 1;
+    margin-top: 80px; /* فاصله برای اینکه زیر هدر فیکس نرود */
+}
+
+/* ================== SIDEBAR ================== */
+.sidebar {
+    width: 260px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 30px 20px;
+    position: sticky;
+    top: 80px;
+    height: calc(100vh - 80px);
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    margin-bottom: 15px;
+}
+
+.menu a {
+    color: #bbb;
+    text-decoration: none;
+    padding: 12px 18px;
+    display: block;
+    border-radius: 12px;
+    transition: 0.3s;
+    font-size: 15px;
+}
+
+.menu li.active a,
+.menu a:hover {
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 61, 74, 0.3);
+}
+
+/* ================== MAIN CONTENT ================== */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.section-header {
+    margin-bottom: 35px;
+}
+
+.section-header h1 {
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.section-header p {
+    color: #aaa;
+}
+
+/* ================== PROFILE SECTION LAYOUT ================== */
+.profile-section {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 30px;
+    align-items: start;
+}
+
+/* ================== PROFILE CARD ================== */
+.profile-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 20px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.profile-card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 4px solid #ff3d4a;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.profile-card h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.profile-card span {
+    color: #ff9900;
+    font-size: 15px;
+    font-family: monospace;
+}
+
+/* ================== PROFILE FORM ================== */
+.profile-form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-form h3 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+    color: #ff3d4a;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.profile-form input:focus {
+    outline: none;
+    border-color: #ff3d4a;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.profile-form input:disabled {
+    background: rgba(255, 255, 255, 0.05);
+    color: #888;
+    cursor: not-allowed;
+}
+
+.btn-save {
+    margin-top: 10px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-save:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 61, 74, 0.4);
+}
+
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1024px) {
+    .profile-section {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        display: none; /* در تبلت و موبایل سایدبار را مخفی می‌کنیم یا منوی همبرگری می‌گذاریم */
+    }
+}

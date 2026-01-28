@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ثبت‌نام | سینما رزرو</title>
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
+
+    <script src="./js/global.js" defer></script>
+</head>
+<body class="auth-page">
+
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">🎬 سینما رزرو</a>
+            <nav class="nav">
+                <a href="index.html">خانه</a>
+                <a href="contact.html">تماس با ما</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        <h2>🎟️ ثبت‌نام</h2>
+        <p class="auth-subtitle">حساب کاربری خود را بسازید</p>
+
+        <form id="registerForm" class="auth-form">
+            <div class="form-group">
+                <label>نام و نام خانوادگی</label>
+                <input type="text" id="fullname" placeholder="حسین محمدپور" required />
+            </div>
+
+            <div class="form-group">
+                <label>نام کاربری</label>
+                <input type="text" id="username" placeholder="Username" required />
+            </div>
+
+            <div class="form-group">
+                <label>رمز عبور</label>
+                <input type="password" id="password" placeholder="********" required />
+            </div>
+
+            <div class="form-group">
+                <label>تکرار رمز عبور</label>
+                <input type="password" id="confirmPassword" placeholder="********" required />
+            </div>
+
+            <button type="submit" class="btn-primary">ایجاد حساب کاربری</button>
+        </form>
+
+        <p class="auth-footer">
+            قبلاً ثبت‌نام کرده‌اید؟
+            <a href="login.html">وارد شوید</a>
+        </p>
+    </main>
+
+    <script src="./js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* تنظیمات کلی صفحه */
+* {
+    font-family: "A Ordibehesht shablon", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+} /* آکولاد در اینجا بسته نشده بود که اصلاح شد */
+
+body {
+    min-height: 100vh;
+    position: relative;
+    color: #fff;
+    direction: rtl; /* برای نمایش صحیح فرم‌های فارسی */
+}
+
+/* پس‌زمینه ثابت با افکت Blur */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/backgrounds/cinema-background.jpg") center / cover no-repeat;
+    filter: brightness(0.4) blur(2px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #ff9900;
+}
+
+/* بخش تماس */
+.contact-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: transparent;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* کانتینر فرم */
+.container {
+    background: rgba(42, 82, 152, 0.2); /* استفاده از شفافیت برای زیبایی بیشتر در پس‌زمینه سینمایی */
+    backdrop-filter: blur(10px); /* افکت شیشه‌ای مدرن */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* فرم تماس */
+.contact-form .form-group {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff9900; /* رنگ لیبل‌ها برای خوانایی بهتر روی پس‌زمینه تیره تغییر یافت */
+    font-weight: bold;
+    font-size: 22px; /* کمی کوچک‌تر برای تناسب بهتر */
+}
+
+/* فیلدهای ورودی */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+    font-size: 18px; /* سایز معقول‌تر برای فیلد ورودی */
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #ff9900;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+/* دکمه */
+.contact-form button {
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto; /* وسط‌چین کردن دکمه */
+}
+
+.contact-form button:hover {
+    background: #cc7a00;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 153, 0, 0.3);
+}
+/* =============================
+   HEADER STYLE (اصلاح شده برای گوشه‌ها)
+   ============================= */
+.main-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    /* فاصله عمودی 15 پیکسل و فاصله افقی 2 درصد از لبه‌های صفحه */
+    padding: 15px 2%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+}
+
+.header-content {
+    width: 100%; /* اشغال تمام عرض در دسترس */
+    display: flex;
+    justify-content: space-between; /* چسباندن محتوا به دو طرف */
+    align-items: center;
+}
+
+.main-header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff9900;
+    text-decoration: none;
+    /* حذف فاصله‌های اضافی احتمالی */
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    /* فاصله بین آیتم‌های منو */
+    margin-right: 25px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.nav a.active {
+    color: #ff9900;
+}
+
+.nav a:hover {
+    color: #ffb84d;
+}
+
+/* دکمه منو برای موبایل */
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav { display: none; }
+    .menu-btn { display: block; }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سینما رزرو | خانه</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/fonts.css">
+     <link rel="stylesheet" href="css/slider.css" /> 
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+
+    <!-- JavaScript Files -->
+    <script src="js/global.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/slider.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Header - همانند movies.html -->
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">
+                🎬 سینما رزرو
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="active">خانه</a>
+                <a href="movies.html">فیلم‌ها</a>
+                <a href="booking.html">رزرو بلیط</a>
+                <a href="contact.html">تماس با ما</a>
+                <a href="login.html" class="login-btn">ورود / ثبت‌نام</a>
+            </nav>
+
+            <button class="menu-btn">☰</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>به سینما رزرو خوش آمدید</h1>
+            <p>رزرو آسان و سریع بلیط سینما در کمترین زمان</p>
+            <a href="movies.html" class="cta-btn">مشاهده فیلم‌ها</a>
+        </div>
+        <div class="hero-overlay"></div>
+        <img src="images/backgrounds/cinema-background.jpg" alt="سینما" class="hero-bg">
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>چرا سینما رزرو؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>رزرو سریع</h3>
+                <p>در کمتر از ۲ دقیقه بلیط خود را رزرو کنید</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💺</div>
+                <h3>انتخاب صندلی</h3>
+                <p>انتخاب آنلاین صندلی مورد علاقه شما</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎫</div>
+                <h3>پرداخت امن</h3>
+                <p>پرداخت آنلاین با امنیت بالا</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⭐</div>
+                <h3>امتیازدهی</h3>
+                <p>امتیازدهی و ثبت نظر برای فیلم‌ها</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Movies Slider اصلاح شده -->
+    <section class="featured-movies">
+        <h2><i class="fas fa-star"></i> فیلم‌های ویژه این هفته</h2>
+        
+        <div class="slider-container">
+            <div class="slider">
+                <!-- اسلاید ۱: یک عکس بزرگ -->
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=1200&h=400&fit=crop" 
+                         alt="سینما">
+                    <div class="slide-info">
+                        <h3>تجربه سینمایی بی‌نظیر</h3>
+                        <p>کیفیت صدا و تصویر عالی | صندلی‌های راحت</p>
+                        <a href="movies.html" class="slide-btn">مشاهده همه فیلم‌ها</a>
+                    </div>
+                </div>
+                
+                <!-- اسلاید ۲: چند عکس کنار هم -->
+                <div class="slide multi-slide">
+                    <div class="multi-image-container">
+                        <img src="images/slider/johnwick4.jpg" alt="جان ویک">
+                        <div class="image-overlay">
+                            <span>جان ویک ۴</span>
+                        </div>
+                    </div>
+                    <div class="multi-image-container">
+                        <img src="images/slider/guardians.jpg" alt="نگهبانان کهکشان">
+                        <div class="image-overlay">
+                            <span>نگهبانان کهکشان</span>
+                        </div>
+                    </div>
+                    <div class="multi-image-container">
+                        <img src="images/slider/A Hero.jpeg" alt="قهرمان">
+                        <div class="image-overlay">
+                            <span>قهرمان</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- اسلاید ۳: یک عکس دیگر -->
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?w=1200&h=400&fit=crop" 
+                         alt="فیلم">
+                    <div class="slide-info">
+                        <h3>جدیدترین فیلم‌ها</h3>
+                        <p>اکران همزمان با جهان | زیرنویس اختصاصی</p>
+                        <a href="movies.html" class="slide-btn">رزرو بلیط</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slider-btn prev"><i class="fas fa-chevron-right"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-left"></i></button>
+        </div>
+    </section>
+
+
+    <!-- Today's Shows -->
+    <section class="today-shows">
+        <h2>📅 سانس‌های امروز</h2>
+        <div class="shows-list">
+            <div class="show-card">
+                <div class="show-time">۱۶:۳۰</div>
+                <div class="show-info">
+                    <h4>یوز</h4>
+                    <p>سالن ۱ | قیمت: ۴۵,۰۰۰ تومان</p>
+                </div>
+                <a href="booking.html" class="book-now">رزرو</a>
+            </div>
+            <div class="show-card">
+                <div class="show-time">۱۹:۰۰</div>
+                <div class="show-info">
+                    <h4>خورشید</h4>
+                    <p>سالن ۲ | قیمت: ۵۰,۰۰۰ تومان</p>
+                </div>
+                <a href="booking.html" class="book-now">رزرو</a>
+            </div>
+            <div class="show-card">
+                <div class="show-time">۲۱:۳۰</div>
+                <div class="show-info">
+                    <h4>ماجرای نیمروز: رد خون</h4>
+                    <p>سالن ۳ | قیمت: ۵۵,۰۰۰ تومان</p>
+                </div>
+                <a href="booking.html" class="book-now">رزرو</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">۱,۲۵۰+</span>
+                <span class="stat-label">بلیط فروخته شده</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">۴۰+</span>
+                <span class="stat-label">فیلم اکران شده</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">۹۵%</span>
+                <span class="stat-label">رضایت کاربران</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">۲۴/۷</span>
+                <span class="stat-label">پشتیبانی</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - همانند movies.html -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>درباره ما</h3>
+                <p>سینما رزرو اولین سامانه رزرو آنلاین بلیط سینما در ایران با امکان انتخاب صندلی و پرداخت آنلاین.</p>
+            </div>
+            <div class="footer-section">
+                <h3>لینک‌های سریع</h3>
+                <a href="index.html">خانه</a>
+                <a href="movies.html">فیلم‌ها</a>
+                <a href="booking.html">رزرو بلیط</a>
+                <a href="contact.html">تماس با ما</a>
+            </div>
+            <div class="footer-section">
+                <h3>تماس با ما</h3>
+                <p>📞 ۰۲۱-۱۲۳۴۵۶۷۸</p>
+                <p>📧 info@cinema-reserve.ir</p>
+                <p>📍 تهران، خیابان ولیعصر</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © ۲۰۲۵ سیستم رزرو سینما — نسخه نمایشی | طراحی شده با ❤️
+        </div>
+    </footer>
+
+</body>
+</html>
