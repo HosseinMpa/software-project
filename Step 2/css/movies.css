@@ -1,0 +1,184 @@
+/* =============================
+   BODY & PAGE BACKGROUND
+   ============================= */
+body {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/backgrounds/Booking-background.jpg") center / cover no-repeat;
+    filter: brightness(0.4) blur(4px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+/* =============================
+   HEADER
+   ============================= */
+.main-header {
+    position: sticky;
+    font-family: "A Ordibehesht shablon", sans-serif;
+    top: 0;
+    width: 96%;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.main-header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffd6d6;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f1caca;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav a.active {
+    color: #f9d423;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+/* =============================
+   MOVIES SECTION
+   ============================= */
+.movies-section {
+    text-align: center;
+    padding: 50px 20px 30px;
+    font-family: "A Ordibehesht shablon", sans-serif;
+}
+
+.movies-section h2 {
+    font-size: 30px;
+    color: #ffd6d6;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* =============================
+   GRID
+   ============================= */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 28px;
+    padding: 0 50px 50px;
+}
+
+/* =============================
+   MOVIE CARD
+   ============================= */
+.movie-card {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    transition: all 0.35s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+}
+
+/* =============================
+   MOVIE INFO (TEXT OVER IMAGE)
+   ============================= */
+.movie-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+    color: #fff;
+    text-align: center;
+}
+
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.movie-info p {
+    margin: 4px 0 10px;
+    font-size: 14px;
+}
+
+.movie-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.movie-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255,61,74,0.45);
+}
+
+
+/* =============================
+   FOOTER
+   ============================= */
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    color: #f1caca;
+    font-size: 14px;
+}
+
+/* =============================
+   RESPONSIVE
+   ============================= */
+@media (max-width: 768px) {
+    .movies-section h2 {
+        font-size: 24px;
+    }
+
+    .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 28px;
+    padding: 0 50px 50px;
+    }
+
+
+    .movie-card {
+        height: 300px;
+    }
+}

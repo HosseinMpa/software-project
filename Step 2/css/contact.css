@@ -1,0 +1,99 @@
+/* تنظیمات کلی صفحه */
+* {
+    font-family: "A Ordibehesht shablon", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    color: #fff;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/backgrounds/cinema-background.jpg") center / cover no-repeat;
+    filter: brightness(0.4) blur(4px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+h2{
+    font-size: 36px;
+}
+/* بخش تماس */
+.contact-section {
+    width: 92%;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0;
+}
+
+.container {
+    background: rgba(20, 30, 60, 0.85);
+    padding: 45px;
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 153, 0, 0.2);
+}
+
+
+/* فرم تماس */
+.contact-form .form-group {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.8); /* همون رنگ قبلی، بدون تغییر */
+    font-weight: bold;
+    font-size: 26px;
+}
+
+/* فیلدهای ورودی */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    background: rgba(255,255,255,0.25); /* روشن ملایم */
+    color: #fff; /* متن سفید */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255,255,255,0.6);
+}
+
+/* دکمه */
+.contact-form button {
+    background: #ff9900; /* دکمه نارنجی برای تضاد زیبا */
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #cc7a00;
+}

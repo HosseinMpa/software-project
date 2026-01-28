@@ -1,0 +1,279 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IranYekan", sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #333;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+header {
+    background: #111;
+    color: #fff;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+.nav-links a:hover {
+    color: #ff5252;
+}
+
+/* =========================================================
+   SLIDER
+========================================================= */
+.slider {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.slider img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* =========================================================
+   MOVIE LIST
+========================================================= */
+.movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 0 25px 40px;
+}
+
+.movie-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+}
+
+.movie-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.movie-card h3 {
+    font-size: 18px;
+    margin: 10px;
+}
+
+.movie-card p {
+    margin: 0 10px 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.movie-card button {
+    width: 90%;
+    margin: 10px auto 15px;
+    padding: 10px;
+    border: none;
+    background: #ff5252;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: block;
+}
+
+.movie-card button:hover {
+    opacity: 0.9;
+}
+
+/* =========================================================
+   MOVIE DETAILS PAGE
+========================================================= */
+.movie-details {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    display: flex;
+    gap: 30px;
+}
+
+.movie-details img {
+    width: 300px;
+    border-radius: 12px;
+}
+
+.movie-info h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.movie-info p {
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.movie-info button {
+    background: #ff5252;
+    padding: 12px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* =========================================================
+   SEAT BOOKING PAGE
+========================================================= */
+.seats-container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.screen {
+    width: 100%;
+    height: 40px;
+    background: #ccc;
+    margin-bottom: 20px;
+}
+
+.seats {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.seat {
+    width: 28px;
+    height: 28px;
+    background: #bdbdbd;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.seat.selected { background: #4caf50; }
+.seat.reserved { background: #ff5252; cursor: not-allowed; }
+
+/* =========================================================
+   DASHBOARD PAGE
+========================================================= */
+.dashboard {
+    width: 95%;
+    margin: 30px auto;
+}
+
+.stats-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.stat {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.stat span.number {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ff5252;
+}
+
+/* ==========================
+   Reservation Table
+========================== */
+.table-box {
+    margin-top: 30px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th, table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background: #111;
+    color: #fff;
+}
+
+/* ==========================
+   Charts
+========================== */
+.charts-section {
+    margin: 40px auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+canvas {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 768px) {
+    .movie-details {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .movie-details img {
+        width: 90%;
+    }
+}
