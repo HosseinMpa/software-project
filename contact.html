@@ -2,23 +2,18 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تماس با ما | سینما</title>
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
-
-    <script src="./js/global.js"></script>
-
-
+    <link rel="stylesheet" href="css/fonts.css">
+    <script src="./js/global.js" defer></script>
 </head>
-
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">سینما</a>
+    <header class="main-header">
+        <div class="header-content"> <a href="index.html" class="logo">سینما</a>
 
-            <nav class="nav-links">
+            <nav class="nav">
                 <a href="index.html">خانه</a>
                 <a href="movies.html">فیلم‌ها</a>
                 <a href="booking.html">رزرو</a>
@@ -28,20 +23,25 @@
             <button class="menu-btn">☰</button>
         </div>
     </header>
-
     <section class="contact-section">
         <div class="container">
             <h2>تماس با ما</h2>
 
             <form class="contact-form">
-                <label>نام و نام خانوادگی:</label>
-                <input type="text" placeholder="نام شما">
+                <div class="form-group">
+                    <label for="name">نام و نام خانوادگی:</label>
+                    <input type="text" id="name" placeholder="نام شما">
+                </div>
 
-                <label>ایمیل:</label>
-                <input type="email" placeholder="example@gmail.com">
+                <div class="form-group">
+                    <label for="email">ایمیل:</label>
+                    <input type="email" id="email" placeholder="example@gmail.com">
+                </div>
 
-                <label>پیام شما:</label>
-                <textarea rows="5" placeholder="متن پیام..."></textarea>
+                <div class="form-group">
+                    <label for="message">پیام شما:</label>
+                    <textarea id="message" rows="5" placeholder="متن پیام..."></textarea>
+                </div>
 
                 <button type="submit">ارسال پیام</button>
             </form>
@@ -50,7 +50,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/contact.js"></script>
-
 
 </body>
 </html>

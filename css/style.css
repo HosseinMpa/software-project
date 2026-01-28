@@ -1,113 +1,41 @@
-body {
-    margin: 0;
-    font-family: tahoma, sans-serif;
-    background: #f4f4f4;
+.main-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    padding: 15px 4%; /* افزایش فاصله برای چسبیدن بهتر به گوشه‌ها */
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* تراز کردن محتوا در وسط کل عرض */
 }
 
-/* Header */
-.main-header {
-    background: #222;
-    color: white;
-    padding: 15px 30px;
+.header-content {
+    width: 100%; /* اشغال تمام عرض مجاز */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* هل دادن لوگو به راست و منو به چپ */
     align-items: center;
 }
 
-.nav a {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    transition: 0.3s;
-}
-
-.nav a:hover {
-    color: #ffcc00;
-}
-
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 50px 15px;
-}
-
-.start-btn {
-    background: #ff9900;
-    padding: 12px 25px;
-    border-radius: 6px;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.start-btn:hover {
-    background: #cc7a00;
-}
-
-/* Footer */
-.main-footer {
-    background: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.main-header {
+.nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    background: #222;
-    color: #fff;
+    gap: 30px;
+    margin-right: auto; /* اطمینان از اینکه منو به سمت چپ هل داده می‌شود */
 }
 
 .main-header .logo {
-    font-size: 1.4rem;
+    font-size: 28px;
     font-weight: bold;
-}
-
-.main-header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.main-header nav ul li a {
-    color: #fff;
+    color: #ff9900;
     text-decoration: none;
-    font-size: 1rem;
+    white-space: nowrap; /* جلوگیری از شکستن خط لوگو */
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
     transition: 0.3s;
 }
-
-.main-header nav ul li a:hover {
-    opacity: 0.7;
-}
-
-.auth-buttons a {
-    margin-left: 10px;
-    padding: 8px 15px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.btn-login {
-    background: #444;
-    color: #fff;
-}
-
-.btn-login:hover {
-    background: #555;
-}
-
-.btn-register {
-    background: #ff4747;
-    color: #fff;
-}
-
-.btn-register:hover {
-    background: #e63939;
-}
-

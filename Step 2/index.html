@@ -1,80 +1,0 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8" />
-    <title>سینما رزرو - صفحه اصلی</title>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/slider.css" />
-    <script src="./js/global.js"></script>
-
-
-    <!-- JS -->
-    <script src="js/slider.js" defer></script>
-</head>
-
-<body>
-
-    <!-- ================= HEADER ================= -->
-    <header class="main-header">
-        <div class="logo">🎬 سینما رزرو</div>
-
-        <nav class="nav">
-            <a href="index.html">خانه</a>
-            <a href="movies.html">فیلم‌ها</a>
-            <a href="booking.html">رزرو بلیط</a>
-            <a href="contact.html">تماس با ما</a>
-        </nav>
-            <div class="auth-buttons">
-                <a href="login.html" class="btn-login">ورود</a>
-                <a href="register.html" class="btn-register">ثبت‌نام</a>
-            </div>
-    </header>
-
-
-    <!-- ================= SLIDER ================= -->
-    <section class="slider-container">
-        
-        <div class="slider-track" id="sliderTrack">
-
-            <div class="slide" onclick="goToBooking()">
-                <img src="images/picture/slider_1/s_1.png" alt="اسلاید ۱">
-                <div class="slide-title">اکران ویژه سینما</div>
-            </div>
-
-            <div class="slide" onclick="goToBooking()">
-                <img src="images/picture/slider_2/s_2.png" alt="اسلاید ۲">
-                <div class="slide-title">رزرو آنلاین بلیط</div>
-            </div>
-
-            <div class="slide" onclick="goToBooking()">
-                <img src="images/picture/slider_3/s_3.png" alt="اسلاید ۳">
-                <div class="slide-title">جدیدترین فیلم‌ها</div>
-            </div>
-
-        </div>
-
-        <button id="prevBtn" class="slider-btn">❮</button>
-        <button id="nextBtn" class="slider-btn">❯</button>
-        <div class="dots" id="dots"></div>
-
-    </section>
-
-
-
-    <!-- ================= HERO SECTION ================= -->
-    <section class="hero">
-        <h2>سامانه رزرو آنلاین بلیط سینما</h2>
-        <p>فیلم مورد علاقه‌تان را انتخاب کنید و بهترین صندلی را رزرو کنید.</p>
-        <a class="start-btn" href="booking.html">شروع رزرو 🎬</a>
-    </section>
-
-
-    <!-- ================= FOOTER ================= -->
-    <footer class="main-footer">
-        © 2025 سیستم رزرو سینما — نسخه نمایشی
-    </footer>
-
-</body>
-</html>

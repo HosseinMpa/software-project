@@ -3,48 +3,60 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ثبت‌نام | Cinema</title>
+    <title>ثبت‌نام | سینما رزرو</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/auth.css" />
-    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/fonts.css" />
 
-
+    <script src="./js/global.js" defer></script>
 </head>
 <body class="auth-page">
 
-    <div class="auth-container">
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">🎬 سینما رزرو</a>
+            <nav class="nav">
+                <a href="index.html">خانه</a>
+                <a href="contact.html">تماس با ما</a>
+            </nav>
+        </div>
+    </header>
 
-        <h2>🎟️ ثبت‌نام در سینما</h2>
-        <p class="auth-subtitle">ساخت حساب کاربری جدید</p>
+    <main class="auth-container">
+        <h2>🎟️ ثبت‌نام</h2>
+        <p class="auth-subtitle">حساب کاربری خود را بسازید</p>
 
         <form id="registerForm" class="auth-form">
+            <div class="form-group">
+                <label>نام و نام خانوادگی</label>
+                <input type="text" id="fullname" placeholder="حسین محمدپور" required />
+            </div>
 
-            <label>نام کامل</label>
-            <input type="text" id="fullname" placeholder="نام و نام خانوادگی" required />
+            <div class="form-group">
+                <label>نام کاربری</label>
+                <input type="text" id="username" placeholder="Username" required />
+            </div>
 
-            <label>نام کاربری</label>
-            <input type="text" id="username" placeholder="username" required />
+            <div class="form-group">
+                <label>رمز عبور</label>
+                <input type="password" id="password" placeholder="********" required />
+            </div>
 
-            <label>رمز عبور</label>
-            <input type="password" id="password" placeholder="********" required />
+            <div class="form-group">
+                <label>تکرار رمز عبور</label>
+                <input type="password" id="confirmPassword" placeholder="********" required />
+            </div>
 
-            <label>تکرار رمز عبور</label>
-            <input type="password" id="confirmPassword" placeholder="********" required />
-
-            <button type="submit" class="btn-primary">ثبت‌نام</button>
+            <button type="submit" class="btn-primary">ایجاد حساب کاربری</button>
         </form>
 
         <p class="auth-footer">
             قبلاً ثبت‌نام کرده‌اید؟
-            <a href="login.html">ورود</a>
+            <a href="login.html">وارد شوید</a>
         </p>
+    </main>
 
-    </div>
-
-    <!-- JS -->
     <script src="./js/register.js"></script>
-
 </body>
 </html>

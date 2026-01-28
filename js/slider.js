@@ -1,76 +1,43 @@
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
-const sliderTrack = document.getElementById("sliderTrack");
-const dotsContainer = document.getElementById("dots");
-
-let autoSlideInterval;
-
-
-function updateSlider() {
-    sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-    document.querySelectorAll(".dot").forEach((dot, i) => {
-        dot.classList.toggle("active", i === currentIndex);
-    });
-}
-
-function createDots() {
-    slides.forEach((_, i) => {
-        const dot = document.createElement("span");
-        dot.classList.add("dot");
-        if (i === 0) dot.classList.add("active");
-
-        dot.addEventListener("click", () => {
-            currentIndex = i;
-            updateSlider();
-            resetAutoSlide();
+// slider.js
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    
+    if (!slider || !slides.length) return;
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }
+    
+    function prevSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+    
+    // Event Listeners
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    
+    // Auto slide every 5 seconds
+    setInterval(nextSlide, 5000);
+    
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('.menu-btn');
+    const nav = document.querySelector('.nav');
+    
+    if (menuBtn && nav) {
+        menuBtn.addEventListener('click', function() {
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
         });
-
-        dotsContainer.appendChild(dot);
-    });
-}
-
-// دکمه‌ها
-document.getElementById("prevBtn").addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-    updateSlider();
-    resetAutoSlide();
+    }
 });
-
-document.getElementById("nextBtn").addEventListener("click", () => {
-    nextSlide();
-    resetAutoSlide();
-});
-
-function nextSlide() {
-    currentIndex = (currentIndex + 1) % slides.length;
-    updateSlider();
-}
-
-// اسلاید خودکار
-function startAutoSlide() {
-    autoSlideInterval = setInterval(nextSlide, 4000); // هر 4 ثانیه
-}
-
-function resetAutoSlide() {
-    clearInterval(autoSlideInterval);
-    startAutoSlide();
-}
-
-// توقف هنگام hover
-sliderTrack.addEventListener("mouseenter", () => {
-    clearInterval(autoSlideInterval);
-});
-
-sliderTrack.addEventListener("mouseleave", () => {
-    startAutoSlide();
-});
-
-function goToBooking() {
-    window.location.href = "booking.html";
-}
-
-// اجرا
-createDots();
-updateSlider();
-startAutoSlide();

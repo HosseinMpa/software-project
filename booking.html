@@ -3,62 +3,76 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>رزرو بلیت فیلم</title>
+    <title>رزرو بلیت | سینما رزرو</title>
 
-    <!-- فقط فایل‌های واقعی! -->
-    <link rel="stylesheet" href="css/booking.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <script src="./js/global.js"></script>
+    <link rel="stylesheet" href="css/booking.css" />
+    <link rel="stylesheet" href="css/fonts.css" />
 
+    <script src="./js/global.js" defer></script>
 </head>
 
 <body>
 
+    <header class="main-header">
+        <div class="header-content">
+            <a href="index.html" class="logo">🎬 سینما رزرو</a>
+
+            <nav class="nav">
+                <a href="index.html">خانه</a>
+                <a href="movies.html">فیلم‌ها</a>
+                <a href="booking.html" class="active">رزرو بلیت</a>
+                <a href="contact.html">تماس با ما</a>
+            </nav>
+
+            <button class="menu-btn">☰</button>
+        </div>
+    </header>
+
     <div class="booking-container">
+        <h2>رزرو بلیت 🎬</h2>
 
-        <h2>🎫 رزرو بلیت</h2>
-
-        <!-- انتخاب فیلم -->
         <div class="movie-select">
-            <label>فیلم مورد نظر:</label>
+            <label>انتخاب فیلم:</label>
             <select id="movieSelect">
                 <option value="">انتخاب کنید...</option>
-                <option value="Avatar 2">آواتار ۲</option>
-                <option value="Guardians">نگهبانان کهکشان</option>
-                <option value="John Wick 4">جان ویک ۴</option>
+                <option value="yooz">یوز</option>
+                <option value="sun_children">خورشید</option>
+                <option value="midday_adventures">ماجرای نیمروز: رد خون</option>
+                <option value="private_meeting">ملاقات خصوصی</option>
+                <option value="mehdi_situation">موقعیت مهدی</option>
+                <option value="dance_with_me">جهان با من برقص</option>
+                <option value="hero">قهرمان</option>
             </select>
         </div>
 
-        <!-- سانس‌ها -->
         <div class="times">
             <h3>انتخاب سانس:</h3>
-
-            <button class="time-btn">14:00</button>
-            <button class="time-btn">16:00</button>
-            <button class="time-btn">18:00</button>
-            <button class="time-btn">20:00</button>
-            <button class="time-btn">22:00</button>
+            <div class="time-options">
+                <button class="time-btn">14:00</button>
+                <button class="time-btn">16:00</button>
+                <button class="time-btn">18:00</button>
+                <button class="time-btn">20:00</button>
+                <button class="time-btn">22:00</button>
+            </div>
         </div>
 
-        <!-- پرده سینما -->
-        <div class="screen">پرده سینما</div>
+        <div class="screen-container">
+            <div class="screen">پرده سینما</div>
+        </div>
 
-        <!-- صندلی‌ها -->
         <div class="seats-container" id="seatsContainer"></div>
 
-        <!-- خلاصه -->
         <div class="summary">
-            <p>🎬 فیلم: <span id="summaryMovie">-</span></p>
+            <p>🎥 فیلم: <span id="summaryMovie">-</span></p>
             <p>⏰ سانس: <span id="summaryTime">-</span></p>
             <p>💺 صندلی‌ها: <span id="summarySeats">-</span></p>
             <p>💵 مبلغ نهایی: <span id="summaryPrice">0</span> تومان</p>
         </div>
 
-        <button id="reserveBtn" class="btn-reserve">ثبت رزرو</button>
-
+        <button id="reserveBtn" class="btn-reserve">ثبت نهایی رزرو</button>
     </div>
 
-    <script src="js/booking.js"></script>
-
+    <script src="js/booking.js" defer></script>
 </body>
 </html>

@@ -1,135 +1,198 @@
 /* =============================
-   MOVIES PAGE
+   BODY & PAGE BACKGROUND
    ============================= */
-
 body {
-    background: #f4f4f4;
+    min-height: 100vh;
     margin: 0;
-    font-family: "IRANSans", sans-serif;
+    position: relative;
+
 }
 
-/* عنوان بخش */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/backgrounds/Booking-background.jpg") center / cover no-repeat;
+    filter: brightness(0.4) blur(4px);
+    z-index: -2;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: -1;
+}
+
+/* =============================
+   HEADER
+   ============================= */
+.main-header {
+    position: sticky;
+    font-family: "A Ordibehesht shablon", sans-serif;
+    top: 0;
+    width: 96%;
+    padding: 16px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+    z-index: 1000;
+}
+
+.main-header .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffd6d6;
+}
+
+.nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #f1caca;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav a.active {
+    color: #f9d423;
+    font-weight: bold;
+}
+
+.nav a:hover {
+    color: #fff;
+}
+
+/* =============================
+   MOVIES SECTION
+   ============================= */
 .movies-section {
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px 30px;
+    font-family: "A Ordibehesht shablon", sans-serif;
 }
 
 .movies-section h2 {
-    font-size: 28px;
-    color: #222;
-    margin-bottom: 25px;
+    font-size: 30px;
+    color: #ffd6d6;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
 }
 
 /* =============================
    GRID
    ============================= */
-
 .movies-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 25px;
-    padding: 0 40px 40px;
+    gap: 28px;
+    padding: 0 50px 50px;
 }
 
 /* =============================
    MOVIE CARD
    ============================= */
-
 .movie-card {
-    background: #fff;
-    border-radius: 14px;
+    position: relative;
+    border-radius: 18px;
     overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
-    transition: 0.3s ease;
-    text-align: center;
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    transition: all 0.35s ease;
 }
 
 .movie-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.movie-card img {
-    width: 100%;
-    height: 330px;
-    object-fit: cover;
-}
-
-/* عنوان فیلم */
-.movie-card h3 {
-    font-size: 20px;
-    margin: 10px 0;
-    color: #222;
-}
-
-/* توضیحات کوچک */
-.movie-card p {
-    margin: 4px 0;
-    color: #666;
-    font-size: 14px;
-    padding: 0 10px;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.45);
 }
 
 /* =============================
-   BUTTON
+   MOVIE INFO (TEXT OVER IMAGE)
    ============================= */
+.movie-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1));
+    color: #fff;
+    text-align: center;
+}
+
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.movie-info p {
+    margin: 4px 0 10px;
+    font-size: 14px;
+}
 
 .movie-btn {
-    display: block;
-    width: 85%;
-    margin: 15px auto 20px;
-    background: #ff3b3b;
-    color: white;
-    padding: 10px 0;
+    display: inline-block;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    color: #fff;
+    border-radius: 12px;
     text-decoration: none;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: 0.3s;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .movie-btn:hover {
-    background: #e02e2e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255,61,74,0.45);
+}
+.main-header {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* هدر را در وسط نگه می‌دارد */
+    padding: 15px 0;
+}
+
+.header-content {
+    width: 96%; /* یا 100% اگر می‌خواهید کاملاً به لبه بچسبد */
+    max-width: 1800px; /* برای مانیتورهای خیلی بزرگ */
+    display: flex;
+    justify-content: space-between; /* لوگو راست، منو چپ */
+    align-items: center;
+    margin: 0 auto;
 }
 
 /* =============================
-   DARK MODE
+   FOOTER
    ============================= */
-
-body.dark {
-    background: #1c1c1c;
-}
-
-body.dark .movie-card {
-    background: #2b2b2b;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(255,255,255,0.05);
-}
-
-body.dark .movie-card h3 {
-    color: #fff;
-}
-
-body.dark .movie-card p {
-    color: #ccc;
-}
-
-body.dark .movie-btn {
-    background: #ff5252;
+.main-footer {
+    text-align: center;
+    padding: 20px;
+    color: #f1caca;
+    font-size: 14px;
 }
 
 /* =============================
    RESPONSIVE
    ============================= */
-
 @media (max-width: 768px) {
     .movies-section h2 {
         font-size: 24px;
     }
+
     .movies-grid {
-        padding: 0 20px 40px;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 28px;
+    padding: 0 50px 50px;
     }
-    .movie-card img {
-        height: 260px;
+
+
+    .movie-card {
+        height: 300px;
     }
 }

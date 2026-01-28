@@ -3,36 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ورود به سیستم</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>ورود به سیستم | سینما رزرو</title>
+
     <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="css/fonts.css" />
 
-    <script src="./js/global.js"></script>
-
+    <script src="./js/global.js" defer></script>
     <script src="./js/auth.js" defer></script>
+    <script src="./js/login.js" defer></script>
 </head>
+<header class="main-header">
+    <div class="header-content">
+        <a href="index.html" class="logo">سینما</a>
 
-<body>
+        <nav class="nav">
+            <a href="index.html">خانه</a>
+            <a href="movies.html">فیلم‌ها</a>
+            <a href="booking.html">رزرو</a>
+            <a href="contact.html">تماس با ما</a>
+        </nav>
 
+        <button class="menu-btn">☰</button>
+    </div>
+</header>
+
+<body class="login-page">
 
     <div class="login-container">
         <h2>ورود به پنل مدیریت</h2>
 
         <form id="loginForm">
-            <input type="text" id="username" placeholder="نام کاربری" />
-            <input type="password" id="password" placeholder="رمز عبور" />
-            <button type="submit">ورود</button>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="نام کاربری" required />
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="رمز عبور" required />
+            </div>
+            <button type="submit" class="login-btn">ورود</button>
         </form>
 
         <div class="login-footer">
-            حساب کاربری ندارید؟
-            <a href="register.html">ثبت‌نام</a>
+            <p>حساب کاربری ندارید؟ <a href="register.html">ثبت‌نام کنید</a></p>
+            <a href="index.html" class="back-home">بازگشت به خانه</a>
         </div>
     </div>
-
-
-    <script src="./js/login.js"></script>
-
 
 </body>
 </html>

@@ -1,112 +1,191 @@
-/* ================== RESET ================== */
+/* ================== RESET & FONTS ================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Vazirmatn, sans-serif;
+    font-family: "Vazirmatn", sans-serif;
 }
 
-/* ================== BODY ================== */
+/* ================== BODY & BACKGROUND ================== */
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    margin: 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column; /* برای چیدمان عمودی هدر و محتوا */
+    position: relative;
     color: #fff;
+    overflow-x: hidden;
 }
 
-/* ================== LOGIN CARD ================== */
-.login-container {
+/* تصویر پس‌زمینه سینمایی */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url("../images/backgrounds/cinema-background.jpg") center / cover no-repeat;
+    filter: brightness(0.3) blur(8px);
+    z-index: -2;
+}
+
+/* لایه تیره روی پس‌زمینه برای خوانایی بیشتر */
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* ================== HEADER (هماهنگ با صفحه تماس) ================== */
+.main-header {
+    position: fixed; /* ثابت در بالای صفحه */
+    top: 0;
     width: 100%;
+    padding: 15px 4%; /* فاصله از طرفین برای چسبیدن به گوشه‌ها */
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* لوگو راست، منو چپ */
+    align-items: center;
+}
+
+.main-header .logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ff9900;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav a:hover, .nav a.active {
+    color: #ff9900;
+}
+
+.menu-btn {
+    display: none; /* مخفی در دسکتاپ */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ================== LOGIN CONTAINER (باکس وسط) ================== */
+.login-container {
+    width: 90%;
     max-width: 420px;
     background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
-    border-radius: 18px;
-    padding: 40px 35px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-    animation: fadeIn 0.8s ease;
-}
-
-/* ================== TITLE ================== */
-.login-container h2 {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 45px 35px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    margin-bottom: 30px;
-    font-size: 1.6rem;
-    color: #f1f1f1;
+
+    /* مرکز‌چین کردن هوشمند با استفاده از Flex والد */
+    margin: auto;
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 0.8s ease-out;
 }
 
-/* ================== FORM ================== */
-.login-container form {
+/* ================== FORM ELEMENTS ================== */
+.login-container h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    color: #ffd6d6;
+}
+
+#loginForm {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 20px;
 }
 
-/* ================== INPUTS ================== */
 .login-container input {
     width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: none;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     outline: none;
-    font-size: 0.95rem;
-    background: rgba(255, 255, 255, 0.15);
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
-}
-
-.login-container input::placeholder {
-    color: #ddd;
+    transition: 0.3s;
 }
 
 .login-container input:focus {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.18);
+    border-color: #ff6b6b;
+    box-shadow: 0 0 12px rgba(255, 107, 107, 0.2);
 }
 
-/* ================== BUTTON ================== */
 .login-container button {
     margin-top: 10px;
-    padding: 12px;
+    padding: 14px;
     border-radius: 12px;
     border: none;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    color: #0f2027;
-    background: linear-gradient(135deg, #f9d423, #ff4e50);
-    transition: all 0.3s ease;
+    color: #fff;
+    background: linear-gradient(135deg, #ff3d4a, #ff6b6b);
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .login-container button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(255, 61, 74, 0.4);
+    filter: brightness(1.1);
 }
 
-/* ================== FOOTER TEXT ================== */
+/* ================== FOOTER (لینک ثبت‌نام) ================== */
 .login-footer {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #ddd;
+    margin-top: 25px;
+    font-size: 0.95rem;
+    color: #f1caca;
 }
 
 .login-footer a {
     color: #f9d423;
     text-decoration: none;
+    font-weight: bold;
+    margin-right: 5px;
+    transition: 0.3s;
 }
 
 .login-footer a:hover {
-    text-decoration: underline;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(249, 212, 35, 0.8);
 }
 
-/* ================== ANIMATION ================== */
+/* ================== RESPONSIVE ================== */
+@media (max-width: 768px) {
+    .nav { display: none; }
+    .menu-btn { display: block; }
+}
+
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(25px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
