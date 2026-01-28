@@ -1,4 +1,5 @@
  
+<<<<<<< HEAD
 from sqlalchemy import Column, Integer, String, Text, DateTime, Float
 from database import Base
 from datetime import datetime
@@ -34,3 +35,5 @@ class Movie(Base):
             "poster_url": self.poster_url,
             "trailer_url": self.trailer_url
         }
+=======
+>>>>>>> 360738da529f595944e511dab3af6949aa97626e
